@@ -1,0 +1,6 @@
+fuel_calculator.fuel_default_settings:
+  title: Fuel form configuration
+  description: Configure the default values for the fuel form.
+  parent: system.admin_config_system
+  route_name: fuel_calculator.fuel_default_settings
+  weight: 10

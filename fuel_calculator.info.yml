@@ -1,0 +1,8 @@
+name: 'fuel_calculator'
+type: module
+description: 'Calculates fuel for given distance.'
+package: Custom
+core_version_requirement: ^10
+dependencies:
+  - rest:rest
+  - drupal:dblog
