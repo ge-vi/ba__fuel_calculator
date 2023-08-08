@@ -1,13 +1,8 @@
 <?php
-/**
- * @file
- * Contains \Drupal\fuel_calculator\Plugin\Block\FuelCalculatorBlock.
- */
 
 namespace Drupal\fuel_calculator\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
-use Drupal\Core\Form\FormInterface;
 
 /**
  * Provides a 'fuel_calculator' block.
@@ -26,5 +21,6 @@ class FuelCalculatorBlock extends BlockBase {
   public function build() {
     $form = \Drupal::formBuilder()->getForm('Drupal\fuel_calculator\Form\FuelCalculatorForm');
     return $form;
-   }
+  }
+
 }

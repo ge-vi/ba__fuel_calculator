@@ -1,0 +1,10 @@
+fuel_form:
+  version: 1.0
+  css:
+    theme:
+      css/fuelForm.css: {}
+  js:
+    js/fuelForm.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

@@ -8,22 +8,19 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Configure fuel_calculator settings for this site.
  */
-final class FuelDefaultSettingsForm extends ConfigFormBase
-{
+final class FuelDefaultSettingsForm extends ConfigFormBase {
 
   /**
    * {@inheritdoc}
    */
-  public function getFormId()
-  {
+  public function getFormId() {
     return 'fuel_calculator_fuel_default_settings';
   }
 
   /**
    * {@inheritdoc}
    */
-  protected function getEditableConfigNames()
-  {
+  protected function getEditableConfigNames() {
     return ['fuel_calculator.settings'];
   }
 
@@ -76,4 +73,5 @@ final class FuelDefaultSettingsForm extends ConfigFormBase
       ->save();
     parent::submitForm($form, $form_state);
   }
+
 }

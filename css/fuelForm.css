@@ -1,0 +1,65 @@
+.fuel-calculator-fuel-calculator {
+  background-color: #e0e0e0;
+  font-weight: bold;
+}
+.fuel-calculator-fuel-calculator .form-actions {
+  background-color: #6e6e6e;
+  justify-content: center;
+}
+.fuel-calculator-fuel-calculator .form-actions .button {
+  color: #6e6e6e;
+  background-color: #ffffff;
+  text-align: center;
+  border: 1px solid #6e6e6e;
+  transition: all 0.2s ease;
+}
+.fuel-calculator-fuel-calculator .form-actions .button:hover {
+  background-color: #6e6e6e;
+  color: #ffffff;
+  border: none;
+  border: 1px solid #ffffff;
+  transition: all 0.2s ease;
+}
+.fuel-calculator-fuel-calculator .form-actions .button:focus {
+  background-color: #6e6e6e;
+  color: #ffffff;
+  border: none;
+  border: 1px solid #ffffff;
+  transition: all 0.2s ease;
+}
+.fuel-calculator-fuel-calculator .fuel-calculation-result {
+  background-color: #c0c0c0;
+}
+.fuel-calculator-fuel-calculator .js-form-item {
+  padding: 0 40px;
+  display: flex;
+  justify-content: flex-start;
+  font-weight: 900;
+}
+.fuel-calculator-fuel-calculator .js-form-item:first-child {
+  padding-top: 40px;
+}
+.fuel-calculator-fuel-calculator .js-form-item label {
+  width: 200px;
+  text-align: right;
+  align-self: center;
+  display: flex;
+  justify-content: flex-end;
+}
+.fuel-calculator-fuel-calculator .js-form-item input {
+  margin: 0 10px;
+  font-weight: 900;
+}
+.fuel-calculator-fuel-calculator .js-form-item .description {
+  align-self: center;
+  display: flex;
+  justify-content: flex-end;
+}
+.fuel-calculation-result {
+  margin: 0 40px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.fuel-calculation-result p {
+  text-align: center;
+}
