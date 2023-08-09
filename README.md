@@ -21,7 +21,7 @@ The Fuel Consumption Calculator module provides a versatile calculator to estima
 "price": 2
 }]
 
-![Alt text](relative%20Postman.jpg?raw=true "Postman POST request to REST API")
+![Postman Image](https://github.com/anjali-rathod/Fuel-Calculator/blob/main/Postman.png)
 
 7. **Prefilling Form with URL Parameters:** Users can prefill the form by passing values through the URL, e.g., `http://example.com/fuel-calculator?distance=350&price=12&fuel_consumption=70`.
 
