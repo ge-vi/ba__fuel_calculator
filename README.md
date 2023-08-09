@@ -32,7 +32,7 @@ The Fuel Consumption Calculator module provides a versatile calculator to estima
 ## Installation and Configuration
 
 1. Install the Fuel Consumption Calculator module like any other Drupal module.
-2. For the Rest API to be enabled, install the restui module using composer require drupal/restui , enable it and enable the Fuel calculations API with methods - POST, accepted request format - json and authentication providers - cookie  enabled.
+2. For the Rest API to be enabled, install the restui module using composer require drupal/restui , enable it and enable the Fuel calculations API with methods - POST, accepted request format - json and authentication providers - cookie  enabled. Navigate to permissions and enable `Access POST on Fuel calculations resource` under RESTful Web Services for Anonymous users.
 2. On install the default values will be set which can be altered for the form on the configuration page at `/admin/config/system/fuel-default-settings`.
 3. Place the block on any page to provide quick access to the calculator.
 4. Or access the calculator as a page from `/fuel-calculator`.
