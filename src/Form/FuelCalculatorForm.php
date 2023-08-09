@@ -11,33 +11,63 @@ use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\ReplaceCommand;
 use Drupal\Core\Ajax\MessageCommand;
+use Drupal\fuel_calculator\FuelCalculate;
 
 /**
  * Provides a fuel_calculator form.
  */
 class FuelCalculatorForm extends FormBase {
 
+  /**
+   * The request service.
+   *
+   * @var \Symfony\Component\HttpFoundation\Request
+   */
   protected $request;
+
+  /**
+   * The loggerFactory service.
+   *
+   * @var \Drupal\Core\Logger\LoggerChannelFactoryInterface
+   */
   protected $loggerFactory;
+
+  /**
+   * The Current user service.
+   *
+   * @var \Drupal\Core\Session\AccountProxyInterface
+   */
   protected $currentUser;
 
   /**
+   * The fuel calculator service.
    *
+   * @var \Drupal\fuel_calculator\FuelCalculatorService
    */
-  public function __construct(Request $request, LoggerChannelFactoryInterface $loggerFactory, AccountProxyInterface $currentUser) {
+  protected $fuelCalculatorService;
+
+  /**
+   * {@inheritdoc}
+   */
+  public function __construct(Request $request,
+  LoggerChannelFactoryInterface $loggerFactory,
+  AccountProxyInterface $currentUser,
+    FuelCalculate $fuelCalculatorService) {
     $this->request = $request;
     $this->loggerFactory = $loggerFactory;
     $this->currentUser = $currentUser;
+    $this->fuelCalculatorService = $fuelCalculatorService;
   }
 
   /**
-   *
+   * {@inheritdoc}
    */
   public static function create(ContainerInterface $container) {
     return new static(
       $container->get('request_stack')->getCurrentRequest(),
       $container->get('logger.factory'),
       $container->get('current_user'),
+      $container->get('fuel_calculator.calculate')
     );
   }
 
@@ -137,8 +167,7 @@ class FuelCalculatorForm extends FormBase {
     $fuel_consumption = $form_state->getValue('fuel_consumption');
     $price_per_liter = $form_state->getValue('price');
     // Calculate fuel spent and fuel cost using FuelCalculate service (as before).
-    $fuel_calculator = \Drupal::service('fuel_calculator.calculate');
-    [$fuel_spent, $fuel_cost] = $fuel_calculator->calculate($distance, $fuel_consumption, $price_per_liter);
+    [$fuel_spent, $fuel_cost] = $this->fuelCalculatorService->calculate($distance, $fuel_consumption, $price_per_liter);
 
     // Round the results to one decimal place.
     $fuel_spent = number_format($fuel_spent, 1);
