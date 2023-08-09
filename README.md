@@ -1,6 +1,6 @@
 # Fuel Consumption Calculator Module
 
-The Fuel Consumption Calculator module provides a versatile calculator to estimate fuel consumption and fuel cost for different scenarios. The calculator can be utilized in two ways: as a block on the homepage and as a separate page at `/fuel-calculator`.
+The Fuel Consumption Calculator module provides a versatile calculator to estimate fuel consumption and fuel cost for different scenarios. The calculator can be utilized in two ways: as a block and as a separate page at `/fuel-calculator`.
 
 ## Features
 
