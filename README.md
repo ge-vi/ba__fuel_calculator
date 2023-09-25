@@ -23,7 +23,7 @@ The Fuel Consumption Calculator module provides a versatile calculator to estima
 
 ![Postman Image](https://github.com/anjali-rathod/Fuel-Calculator/blob/main/Postman.png)
 
-7. **Prefilling Form with URL Parameters:** Users can prefill the form by passing values through the URL, e.g., `http://13.234.217.103/fuel-calculator?distance=350&price=12&fuel_consumption=70`.
+7. **Prefilling Form with URL Parameters:** Users can prefill the form by passing values through the URL, e.g., `http://13.233.62.35/fuel-calculator?distance=350&price=12&fuel_consumption=70`.
 
 8. **Input Validation:** The form supports validation, ensuring that only numeric values greater than 0 are allowed.
 
@@ -43,6 +43,6 @@ The Fuel Consumption Calculator module provides a versatile calculator to estima
 2. Enter the required values for fuel consumption, distance, and fuel price in numeric format and greater than zero.
 3. The live output will be displayed via AJAX as you input the values.
 4. Find the db logging of the results at `/admin/reports/dblog`. 
-5. To prefill the form, pass values through the URL parameters. eg: http://13.234.217.103/fuel-calculator?distance=350&price=12&fuel_consumption=70
+5. To prefill the form, pass values through the URL parameters. eg: http://13.233.62.35/fuel-calculator?distance=350&price=12&fuel_consumption=70
 6. Submit the form to calculate fuel consumption and fuel cost.
 
